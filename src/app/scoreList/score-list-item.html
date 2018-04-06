@@ -1,0 +1,14 @@
+<div class="score-list__plus">
+  <button long-press type="button" class="score-list__button score-list__button--plus" (onLongPressing)='longPressingAdd($event)' (onLongPress)='longPress($event)' (onLongPressEnd)='longPressEnd($event)'  (mouseup)='add()' name="add"></button>
+</div>
+<div class="score-list__info">
+  <div class="score-list__player">
+    <input class="score-list__input" type="text" name="player" [(ngModel)]="playerName" />
+  </div>
+  <div class="score-list__score">
+    <input class="score-list__input" type="number" name="" [(ngModel)]='points'/>
+  </div>
+</div>
+<div class="score-list__minus">
+  <button long-press type="button" class="score-list__button score-list__button--minus" (onLongPressing)='longPressingSubtract($event)' (onLongPress)='longPress($event)' (onLongPressEnd)='longPressEnd($event)' (mouseup)='subtract($event)' name="subtract"></button>
+</div>

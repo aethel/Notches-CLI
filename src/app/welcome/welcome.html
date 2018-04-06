@@ -1,0 +1,19 @@
+<h1 class="main-header">Notches</h1>
+<ol class="start-form">
+  <li class="start-form__item">
+    <label for="players">Start by adding number of players</label>
+    <div class="input-circle">
+      <input type="number" class="start-form__input" id="players" [(ngModel)]='players' name="players" value="" />
+    </div>
+  </li>
+  <li class="start-form__item">
+    <label for="points">Then add initial number of points</label>
+    <div class="input-circle">
+      <input type="number" class="start-form__input" id="points" [(ngModel)]='points' name="points" value="" />
+    </div>
+  </li>
+</ol>
+<button type="button"  (click)="sendSetupObj()" class="start-btn">Start</button>
+<figure class="jewel">
+	<img class="jewel__image" src="assets/jewel-l.png" alt="">
+</figure>

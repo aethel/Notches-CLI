@@ -1,0 +1,17 @@
+$hexOffset: .5rem;
+
+.hex-bg {
+  height: calc(100% - 1.7rem);
+  &:after {
+    content:'';
+		height: 100%;
+    position: absolute;
+    top:$hexOffset;
+    left:$hexOffset;
+    right:$hexOffset;
+    bottom:$hexOffset;
+    z-index: -1;
+    background: url('assets/hex.svg') no-repeat center center / cover;
+
+  }
+}

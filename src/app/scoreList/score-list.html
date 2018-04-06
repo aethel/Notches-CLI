@@ -1,0 +1,44 @@
+<div class="n-list">
+	<header class="header">
+		<button type="button" class="button--menu" (click)='popover = !popover' name="popover"></button>
+		<h1 class="main-header">Notches</h1>
+		<button type="button" class="button--restart" (click)='restart()' name="restart"></button>
+	</header>
+	<ul class="score-list" *ngIf="setupObj">
+		<li class="score-list__item player{{i+1}}" *ngFor='let points of playersArr; let i = index'>
+			<n-item [points]='points' [index]='i'></n-item>
+		</li>
+	</ul>
+	<div class="popover" *ngIf=popover>
+		<header class="popover__header">
+			<button type="button" (click)='popover = !popover' class="button--close" name="popover"></button>
+			<h2>Instructions</h2>
+		</header>
+		<ul>
+			<li class="icon-item">
+				<figure class="icon-item__figure">
+					<img src="assets/tap.svg" alt="hand outline with extended finger">
+				</figure>
+				<p class="icon-item__text">Tap on player's label to enter a name</p>
+			</li>
+			<li class="icon-item">
+				<figure class="icon-item__figure">
+					<img src="assets/tap.svg" alt="hand outline with extended finger"/>
+				</figure>
+				<p class="icon-item__text">Tap plus or minus to add or subtract points</p>
+			</li>
+			<li class="icon-item">
+				<figure class="icon-item__figure">
+					<img src="assets/longtap.svg" alt="hand outline with extended finger and circle around it">
+				</figure>
+				<p class="icon-item__text">Long tap plus or minus to add or subtract 10 points</p>
+			</li>
+			<li class="icon-item">
+				<figure class="icon-item__figure">
+					<img src="assets/tap.svg" alt="hand outline with extended finger">
+				</figure>
+				<p class="icon-item__text">Tap the score to type in the number of points</p>
+			</li>
+		</ul>
+	</div>
+</div>

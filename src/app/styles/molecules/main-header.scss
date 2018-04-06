@@ -1,0 +1,13 @@
+.main-header {
+	background-image: linear-gradient(to bottom, $headerStep1, $headerStep2);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	font-size: 3.5rem;
+	height: 15vh;
+	// &:after {
+	// 	content: 'notches';
+	// 	display: inline-block;
+	// 	text-shadow: 0 0 0.7rem transparentize($dark, 0.83);
+	// 	color: transparent;
+	// }
+}

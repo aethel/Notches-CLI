@@ -1,0 +1,22 @@
+.icon-item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin: 0 0 4.5rem 0;
+  }
+}
+
+.icon-item__figure {
+  width: calc(2rem + 4vh);
+  flex: 2 0 auto;
+  max-width: 5rem;
+  margin: 0 1rem 0 0;
+}
+
+.icon-item__text {
+  flex: 1 0 auto;
+  color: $light;
+  font-size: calc(1rem + 2vh);
+  width: calc(100% - (3rem + 4vh));
+  text-align: left;
+}

@@ -1,0 +1,77 @@
+//font
+$main: 'Hero';
+$accent: 'antre';
+
+//colors
+$welcomeStep1: #9b3cb7;
+$welcomeStep2: #ff396f;
+$headerStep1: #83eb8e;
+$headerStep2: #43e7c1;
+$light: #fff;
+$dark: #000;
+$graphite: #263238;
+$darkGraphite: #323b44;
+
+$playerStop1-1: #fec180;
+$playerStop2-1: #ff8993;
+$playerStop1-2: #ffa7e7;
+$playerStop2-2: #ea6362;
+$playerStop1-3: #e01e2d;
+$playerStop2-3: #c53364;
+$playerStop1-4: #6078ea;
+$playerStop2-4: #17ead9;
+$playerStop1-5: #45e0a7;
+$playerStop2-5: #b8d534;
+$playerStop1-6: #004b91;
+$playerStop2-6: #60bb46;
+$playerStop1-7: #efbfd5;
+$playerStop2-7: #9d61fd;
+$playerStop1-8: #e35c67;
+$playerStop2-8: #381ce2;
+
+%player1 {
+  background: linear-gradient(to left, $playerStop1-1, $playerStop2-1);
+}
+
+%player2 {
+  background: linear-gradient(to left, $playerStop1-2, $playerStop2-2);
+}
+
+%player3 {
+  background: linear-gradient(to left, $playerStop1-3, $playerStop2-3);
+}
+
+%player4 {
+  background: linear-gradient(to left, $playerStop1-4, $playerStop2-4);
+}
+
+%player5 {
+  background: linear-gradient(to left, $playerStop1-5, $playerStop2-5);
+}
+
+%player6 {
+  background: linear-gradient(to left, $playerStop1-6, $playerStop2-6);
+}
+
+%player7 {
+  background: linear-gradient(to left, $playerStop1-7, $playerStop2-7);
+}
+
+%player8 {
+  background: linear-gradient(to left, $playerStop1-8, $playerStop2-8);
+}
+
+
+$players: 8;
+
+@mixin playerColours {
+  @for $i from 1 through $players {
+    .player#{$i} {
+      &:after {
+        @extend %player#{$i};
+      }
+    }
+  }
+}
+
+@include playerColours;

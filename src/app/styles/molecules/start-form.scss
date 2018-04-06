@@ -1,0 +1,17 @@
+.start-form__item {
+  width: 80vw;
+  height: auto;
+  margin: 0 auto 3.5rem;
+	position: relative;
+
+	&:last-child {
+	margin: 0 auto 5rem;
+	}
+}
+
+.start-form__input {
+  text-align: center;
+	font-size: 3.6rem;
+	font-family: $main;
+	color: $light;
+}

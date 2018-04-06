@@ -1,0 +1,62 @@
+n-item {
+	display: inline-grid;
+  grid-auto-flow: row;
+  width: 100%;
+  outline: 1px solid red;
+	grid-template-columns: [plus-btn] 20vw [info] 3fr [minus-btn] 20vw;
+	color: $light;
+}
+
+.score-list {
+	height: calc(85vh - 4rem);
+}
+
+.score-list__plus {
+	grid-area: plus-btn;
+}
+
+.score-list__minus {
+	grid-area: minus-btn;
+}
+
+.score-list__info {
+	grid-area: info;
+}
+
+.score-list__input {
+	color: $light;
+	text-align: center;
+}
+
+.score-list__player {
+	grid-area: player;
+	& .score-list__input {
+		font-size: 1.8rem;
+	}
+}
+
+.score-list__score {
+	grid-area: score;
+}
+
+.score-list__info {
+	grid-auto-flow: column;
+	grid-template-rows: [player] auto [score] auto;
+}
+
+.score-list__button {
+	border: none;
+	height: 100%;
+	font-size: 3.6rem;
+	color: $light;
+	width: 100%;
+	background-size: 2.25rem;
+}
+
+.score-list__button--plus {
+	background: url("assets/plus.svg") no-repeat center center / 2.25rem transparent;
+}
+
+.score-list__button--minus {
+	background: url("./assets/minus.svg") no-repeat center center / 2.25rem transparent;
+}

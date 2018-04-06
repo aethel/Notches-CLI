@@ -1,0 +1,55 @@
+.score-list__item {
+	border-radius: 50vh;
+	position: relative;
+	z-index: 2;
+	margin: 0 0 1vh 0;
+	display: flex;
+	align-items: center;
+	&:after,
+	&:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		border-radius: 50vh;
+	}
+
+	&:after {
+		z-index: -2;
+		top: 0.1rem;
+		left: 0.1rem;
+		bottom: 0.1rem;
+		right: 0.1rem;
+	}
+
+	&:before {
+		background: $graphite;
+		z-index: -1;
+		top: 0.2rem;
+		left: 0.2rem;
+		bottom: 0.2rem;
+		right: 0.2rem;
+	}
+
+	&:last-child{
+		margin: 0 !important;
+	}
+}
+
+$defaultHeight: 75vh;
+$listHeight: 85vh;
+$listContainerPadding: 4rem;
+$defaultFont: 9vh;
+$factor: 1.5;
+
+@for $i from 1 through $players {
+  .score-list__item:first-child:nth-last-child(#{$i}),
+  .score-list__item:first-child:nth-last-child(#{$i}) ~ .score-list__item  {
+    height: calc(((#{$listHeight} - #{$listContainerPadding}) / #{$i}) - (#{$players}vh - #{$i}vh));
+		max-height: 11.5rem;
+		min-height: 4.5rem;
+		margin-bottom:calc((#{$players}vh - #{$i}vh));
+		.score-list__score .score-list__input {
+			font-size: calc(4vh + #{$players - $i}vh);
+		}
+	}
+}

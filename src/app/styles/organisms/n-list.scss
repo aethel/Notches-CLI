@@ -1,0 +1,34 @@
+.n-list {
+	background: $graphite;
+	display: block;
+	text-align: center;
+	min-height: 100vh;
+	padding: 2rem;
+	box-sizing: border-box;
+
+	header {
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+	}
+
+	.button--menu {
+		margin-top: 1rem;
+		position: absolute;
+		left: 8rem;
+	}
+
+	.button--close,
+	.button--restart {
+		margin-top: 1rem;
+		position: absolute;
+	}
+
+	.button--close {
+		left: 8rem;
+	}
+
+	.button--restart {
+		right: 8rem;
+	}
+}

@@ -1,0 +1,11 @@
+.button--menu {
+  width: calc(2rem + 1vh);
+  height: calc(2rem + 1vh);
+  background: url('assets/menu.svg') no-repeat center center / contain transparent;
+}
+
+.button--restart {
+  width: calc(2rem + 1vh);
+  height: calc(2rem + 1vh);
+  background: url('assets/restart.svg') no-repeat center center / contain transparent;
+}
