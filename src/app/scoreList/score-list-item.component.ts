@@ -10,7 +10,7 @@ export class ScoreListItemComponent implements OnInit {
   private longTap = false;
 
   @Input() points = 0;
-  @Input('index') playerAlias = 0;
+  @Input() playerAlias = 0;
 
   ngOnInit(): void {
     this.playerName = `Player ${this.playerAlias}`;
